@@ -2,23 +2,27 @@
 
 @section('main')
     <main>
-        <div class="container">
-            <table class="table">
+        <div class="container pt-2">
+            <table class="table mt-4">
                 <thead class="thead-dark">
                     <tr>
                         <th scope="col">ID</th>
                         <th scope="col">Titolo</th>
                         <th scope="col">Serie</th>
                         <th scope="col">Tipo</th>
+                        <th scope="col"></th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
+                    @foreach ($comics as $comic)
+                        <tr>
+                            <th scope="row">{{ $comic->id }}</th>
+                            <td>{{ $comic->title }}</td>
+                            <td>{{ $comic->series }}</td>
+                            <td>{{ $comic->type }}</td>
+                            <td><a href="">Dettagli</a></td>
+                        </tr>
+                    @endforeach
 
                 </tbody>
             </table>
