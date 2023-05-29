@@ -3,6 +3,9 @@
 @section('main')
     <main>
         <div class="container pt-2">
+            <div class="my-2 text-end">
+                <a class="btn btn-warning" href="{{ route('comics.create') }}">Aggiungi un fumetto</a>
+            </div>
             <table class="table mt-4">
                 <thead class="thead-dark">
                     <tr>
@@ -19,7 +22,7 @@
                             <th scope="row">{{ $comic->id }}</th>
                             <td>{{ $comic->title }}</td>
                             <td>{{ $comic->series }}</td>
-                            <td>{{ $comic->type }}</td>
+                            <td>{{ ucwords($comic->type) }}</td>
                             <td><a class="btn btn-success" href="{{ route('comics.show', $comic->id) }}">Dettagli</a></td>
                         </tr>
                     @endforeach

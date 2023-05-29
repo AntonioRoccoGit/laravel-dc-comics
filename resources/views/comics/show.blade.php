@@ -11,7 +11,7 @@
                     <ul class="list-group list-group-flush text-start">
                         <li class="list-group-item"><strong>Serie: </strong> {{ $comic->series }}</li>
                         <li class="list-group-item"><strong>Data d'uscita: </strong> {{ $comic->sale_date }}</li>
-                        <li class="list-group-item"><strong>Tipologia: </strong> {{ ucwords(trans($comic->type)) }}</li>
+                        <li class="list-group-item"><strong>Tipologia: </strong> {{ ucwords($comic->type) }}</li>
                         <li class="list-group-item"><strong>Prezzo: </strong> {{ $comic->price }}</li>
                         <li class="list-group-item"><strong>Ultima modifica: </strong> {{ $comic->updated_at }}</li>
                     </ul>
