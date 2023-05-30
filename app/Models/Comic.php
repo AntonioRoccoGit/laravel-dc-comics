@@ -9,4 +9,5 @@ class Comic extends Model
 {
     use HasFactory;
     protected $table = 'comics_db';
+    protected $fillable = ['title', 'description', 'thumb', 'price', 'series', 'sale_date', 'type',];
 }
