@@ -27,7 +27,7 @@
                     <input type="text" class="form-control" id="series" name="series">
                 </div>
                 <div class="mb-3">
-                    <label for="sale_date" class="form-label">Data di uscita YY/MM/DD</label>
+                    <label for="sale_date" class="form-label">Data di uscita YYYY-MM-DD</label>
                     <input type="text" class="form-control" id="sale_date" name="sale_date">
                 </div>
                 <div class="mb-3">
