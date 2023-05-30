@@ -25,7 +25,7 @@
                             <td>{{ ucwords($comic->type) }}</td>
                             <td class="d-flex gap-1">
                                 <a class="btn btn-info" href="{{ route('comics.show', $comic->id) }}">Dettagli</a>
-                                <a class="btn btn-warning" href="">Modifica</a>
+                                <a class="btn btn-warning" href="{{ route('comics.edit', $comic->id) }}">Modifica</a>
                                 <form action="">
                                     <button class="btn btn-danger" href="">Elimina</button>
 
