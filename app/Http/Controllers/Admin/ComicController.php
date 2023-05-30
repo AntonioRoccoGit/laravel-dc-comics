@@ -59,7 +59,8 @@ class ComicController extends Controller
     public function show($id)
     {
         $comic = Comic::find($id);
-        return view('comics.show', compact('comic'));
+        $comic_array = Comic::all();
+        return view('comics.show', compact('comic', 'comic_array'));
     }
 
     /**

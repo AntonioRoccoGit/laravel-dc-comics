@@ -1,7 +1,31 @@
 @extends('layouts.app')
 @section('main')
     <main>
+
+
         <div class="containter">
+
+            <div class="text-center mt-2 mb-2">
+                <div class="dropdown">
+                    <button class="btn btn-info dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Seleziona prodotto
+                    </button>
+                    <ul class="dropdown-menu">
+                        @foreach ($comic_array as $item)
+                            <li>
+                                <a class="dropdown-item" href="{{ route('comics.show', $item->id) }}">
+                                    <div class="card flex-row align-items-center gap-2">
+                                        <img class="img-fluid" style="height: 40px" src="{{ $item->thumb }}"
+                                            alt="">
+                                        <h5 style="font-size: .8rem" class="card-title">{{ $item->title }}</h5>
+
+                                    </div>
+                                </a>
+                            </li>
+                        @endforeach
+                    </ul>
+                </div>
+            </div>
             <div class="card p-4 text-center ">
                 <img style="width: 300px" class="card-img-top m-auto" src="{{ $comic->thumb }}" alt="Card image cap">
                 <div class="card-body">
