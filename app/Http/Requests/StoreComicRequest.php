@@ -51,6 +51,7 @@ class StoreComicRequest extends FormRequest
             'series.required' => 'Campo obbligatorio',
             'series.min' => 'Lunghezza minima :min caratteri',
             'series.max' => 'Lunghezza massima :max caratteri',
+            'sale_date.date' => 'Formato data',
             'sale_date.required' => 'Campo obbligatorio',
             'type.required' => 'Campo obbligatorio',
             'type.min' => 'Lunghezza minima :min caratteri',

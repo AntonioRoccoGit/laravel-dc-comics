@@ -28,15 +28,21 @@
                             <td class="d-flex flex-column align-items-center">
                                 <div class="btn-group me-2" role="group">
 
-                                    <a class="btn btn-info w-50" href="{{ route('comics.show', $comic->id) }}">Dettagli</a>
-                                    <a class="btn btn-warning w-50"
-                                        href="{{ route('comics.edit', $comic->id) }}">Modifica</a>
+                                    <a class="btn btn-info w-50" href="{{ route('comics.show', $comic->id) }}">
+                                        <i class="fa-solid fa-eye"></i>
+                                    </a>
+                                    <a class="btn btn-warning w-50" href="{{ route('comics.edit', $comic->id) }}">
+                                        <i class="fa-solid fa-pencil"></i>
+                                    </a>
                                 </div>
 
-                                <form class="mt-1" action="{{ route('comics.destroy', $comic->id) }}" method="POST">
+                                <form class="mt-1 d-inline-block" action="{{ route('comics.destroy', $comic->id) }}"
+                                    method="POST">
                                     @csrf
                                     @method('DELETE')
-                                    <button class="btn btn-danger clicked-btn" href="">Elimina</button>
+                                    <button class="btn btn-danger clicked-btn" href=""><i
+                                            class="fa-solid fa-ban"></i>
+                                    </button>
 
                                 </form>
                             </td>
