@@ -4,7 +4,9 @@
     <main>
         <div class="container pt-2">
             <div class="my-2 text-end">
+
                 <a class="btn btn-success" href="{{ route('comics.create') }}">Aggiungi un fumetto</a>
+                <a class="btn btn-danger" href="{{ route('home') }}">Log-out</a>
             </div>
             <table class="table align-middle table-striped table-bordered table-sm mt-4">
                 <thead>
@@ -23,12 +25,15 @@
                             <td>{{ $comic->title }}</td>
                             <td>{{ $comic->series }}</td>
                             <td>{{ ucwords($comic->type) }}</td>
-                            <td>
-                                <a class="btn btn-info" href="{{ route('comics.show', $comic->id) }}">Dettagli</a>
-                                <a class="btn btn-warning ms-1" href="{{ route('comics.edit', $comic->id) }}">Modifica</a>
+                            <td class="d-flex flex-column align-items-center">
+                                <div class="btn-group me-2" role="group">
 
-                                <form class="ms-1 d-inline-block" action="{{ route('comics.destroy', $comic->id) }}"
-                                    method="POST">
+                                    <a class="btn btn-info w-50" href="{{ route('comics.show', $comic->id) }}">Dettagli</a>
+                                    <a class="btn btn-warning w-50"
+                                        href="{{ route('comics.edit', $comic->id) }}">Modifica</a>
+                                </div>
+
+                                <form class="mt-1" action="{{ route('comics.destroy', $comic->id) }}" method="POST">
                                     @csrf
                                     @method('DELETE')
                                     <button class="btn btn-danger clicked-btn" href="">Elimina</button>
