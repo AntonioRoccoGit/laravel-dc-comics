@@ -73,7 +73,7 @@
                     <label for="type" class="form-label">Tipologia</label>
                     <select id="type" name="type" class="form-select @error('type') is-invalid @enderror">
                         <option value="" selected>Seleziona</option>
-                        <option @selected($comic->type === 'comic book' || old('type') === 'comic book') value="comic book">Fumetto</option>
+                        <option @selected($comic->type === 'comic book') value="comic book">Fumetto</option>
                         <option @selected($comic->type === 'graphic novel') value="graphic novel">Novella Grafica</option>
                     </select>
                     @error('type')
